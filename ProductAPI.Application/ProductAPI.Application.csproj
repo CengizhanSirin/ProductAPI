@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <Folder Include="Extensions\" />
+    <Folder Include="Features\Products\DTOs\" />
+    <Folder Include="Features\Products\Interfaces\" />
+    <Folder Include="Features\Products\Mappings\" />
+    <Folder Include="Features\Products\Validators\" />
+    <Folder Include="Features\Products\Services\" />
   </ItemGroup>
 
   <ItemGroup>
