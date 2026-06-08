@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ProductAPI.API/ProductAPI.API.csproj" />
+  <Project Path="ProductAPI.Application/ProductAPI.Application.csproj" />
+  <Project Path="ProductAPI.Domain/ProductAPI.Domain.csproj" />
+  <Project Path="ProductAPI.Infrastructure/ProductAPI.Infrastructure.csproj" />
+  <Project Path="ProductAPI.Shared/ProductAPI.Shared.csproj" />
+</Solution>
