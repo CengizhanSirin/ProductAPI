@@ -5,15 +5,17 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace ProductAPI.Infrastructure.Data
+namespace ProductAPI.Infrastructure.Peristence.Context
 {
     public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+
         }
     }
 }
