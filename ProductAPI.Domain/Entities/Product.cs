@@ -1,9 +1,7 @@
 ﻿namespace ProductAPI.Domain.Entities
 {
-    public class Product
+    public class Product:BaseEntity<int>
     {
-        public int Id { get; set; }
-
         public string Name { get; set; } = default!;
 
         public decimal Price { get; set; }

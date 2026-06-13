@@ -22,8 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductAPI.Application\ProductAPI.Application.csproj" />
-    <ProjectReference Include="..\ProductAPI.Infrastructure\ProductAPI.Infrastructure.csproj" />
-    <ProjectReference Include="..\ProductAPI.Shared\ProductAPI.Shared.csproj" />
   </ItemGroup>
 
 </Project>
