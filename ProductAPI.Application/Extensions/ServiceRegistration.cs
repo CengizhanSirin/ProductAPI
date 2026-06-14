@@ -11,7 +11,7 @@ namespace ProductAPI.Application.Extensions
         {
          
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-
+           
             services.AddAutoMapper(cfg => { }, typeof(ProductMappingProfile));
             return services;
         }
