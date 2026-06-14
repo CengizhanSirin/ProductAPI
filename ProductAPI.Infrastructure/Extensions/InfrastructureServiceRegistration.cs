@@ -23,6 +23,8 @@ namespace ProductAPI.Infrastructure.Extensions
                 });
             });
 
+            ///TODO :DI kontrol et.Repo,UnitOfWork
+
             return services;
 
         }

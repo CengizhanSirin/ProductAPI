@@ -7,13 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Features\Products\DTOs\" />
     <Folder Include="Features\Products\Interfaces\" />
-    <Folder Include="Features\Products\Mappings\" />
-    <Folder Include="Features\Products\Validators\" />
     <Folder Include="Features\Products\Services\" />
     <Folder Include="Interfaces\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.1.1" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
   </ItemGroup>
 
   <ItemGroup>
