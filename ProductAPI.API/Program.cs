@@ -1,4 +1,3 @@
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using ProductAPI.API.Filters;
 using ProductAPI.Application.Extensions;
@@ -22,7 +21,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
     options.SuppressModelStateInvalidFilter = true;
 });
 
-builder.Services.AddFluentValidationAutoValidation();
+
 builder.Services.AddServices();
 builder.Services.AddInfrastructure(builder.Configuration);
 

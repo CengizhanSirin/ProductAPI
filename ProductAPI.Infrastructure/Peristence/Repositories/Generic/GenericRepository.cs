@@ -41,5 +41,7 @@ namespace ProductAPI.Infrastructure.Peristence.Repositories.Generic
             return tracking ? query : query.AsNoTracking();
         }
 
+        public Task<List<T>> GetAllAsync() => _dbSet.AsNoTracking().ToListAsync();
+
     }
 }

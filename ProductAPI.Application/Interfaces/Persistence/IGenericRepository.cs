@@ -20,5 +20,7 @@ namespace ProductAPI.Application.Interfaces.Persistence
         void Delete(T entity);
 
         Task DeleteByIdAsync(TId id);
+
+        Task<List<T>> GetAllAsync();
     }
 }

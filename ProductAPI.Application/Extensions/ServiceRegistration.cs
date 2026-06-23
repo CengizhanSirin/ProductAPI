@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using ProductAPI.Application.Features.Products.Mappings;
+using ProductAPI.Application.Features.Products.Services;
 using System.Reflection;
 
 namespace ProductAPI.Application.Extensions
@@ -9,7 +10,8 @@ namespace ProductAPI.Application.Extensions
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-         
+            services.AddScoped<IProductService, ProductService>();
+
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
            
             services.AddAutoMapper(cfg => { }, typeof(ProductMappingProfile));
