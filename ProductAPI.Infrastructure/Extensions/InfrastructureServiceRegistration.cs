@@ -1,7 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProductAPI.Application.Interfaces.Persistence;
 using ProductAPI.Infrastructure.Peristence.Context;
+using ProductAPI.Infrastructure.Peristence.Repositories.Generic;
+using ProductAPI.Infrastructure.Peristence.Repositories.Products;
+using ProductAPI.Infrastructure.Peristence.UnitOfWork;
 using System.Reflection;
 
 namespace ProductAPI.Infrastructure.Extensions
@@ -23,7 +27,10 @@ namespace ProductAPI.Infrastructure.Extensions
                 });
             });
 
-            ///TODO :DI kontrol et.Repo,UnitOfWork
+           
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
 
