@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ProductAPI.API.Extensions;
 using ProductAPI.API.Filters;
 using ProductAPI.Application.Extensions;
 using ProductAPI.Infrastructure.Extensions;
@@ -22,7 +23,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 });
 
 
-builder.Services.AddServices();
+builder.Services.AddServices().AddSwaggerGenExt();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
@@ -30,7 +31,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwaggerExt();
+    //app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
