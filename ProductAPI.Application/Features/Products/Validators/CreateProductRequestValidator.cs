@@ -1,12 +1,9 @@
 ﻿using FluentValidation;
 using ProductAPI.Application.Features.Products.DTOs.Requests;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProductAPI.Application.Features.Products.Validators
 {
-    public class CreateProductRequestValidator:AbstractValidator<CreateProductRequest>
+    public class CreateProductRequestValidator : AbstractValidator<CreateProductRequest>
     {
         public CreateProductRequestValidator()
         {
@@ -16,7 +13,7 @@ namespace ProductAPI.Application.Features.Products.Validators
 
             RuleFor(c => c.Price)
                 .GreaterThan(0).WithMessage("Price must be greater than 0.");
-           
+
 
             RuleFor(c => c.Stock)
                 .InclusiveBetween(1, 100).WithMessage("Stock must be between 1 and 100.");

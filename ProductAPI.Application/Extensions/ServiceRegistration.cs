@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using ProductAPI.Application.Features.Products.Mappings;
 using ProductAPI.Application.Features.Products.Services;
@@ -13,7 +14,8 @@ namespace ProductAPI.Application.Extensions
             services.AddScoped<IProductService, ProductService>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-           
+            services.AddFluentValidationAutoValidation();
+
             services.AddAutoMapper(cfg => { }, typeof(ProductMappingProfile));
             return services;
         }
