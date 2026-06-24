@@ -85,14 +85,14 @@ Proje **Clean Architecture** yaklaşımıyla katmanlara ayrılmıştır:
 
 ### 📍 Products
 
-| Method | Endpoint           | Açıklama              |
-| ------ | ------------------ | --------------------- |
-| GET    | /api/products      | Tüm ürünleri getir    |
-| GET    | /api/products/{id} | Id’ye göre ürün getir |
-| POST   | /api/products      | Yeni ürün oluştur     |
-| PUT    | /api/products/{id} | Ürün güncelle         |
-| DELETE | /api/products/{id} | Ürün sil              |
-
+| Method | Endpoint                              | Açıklama               |
+| ------ | ------------------------------------- | ---------------------  |
+| GET    | /api/products                         | Tüm ürünleri getir     |
+| GET    | /api/products/{id}                    | Id’ye göre ürün getir  |
+| POST   | /api/products                         | Yeni ürün oluştur      |
+| PUT    | /api/products/{id}                    | Ürün güncelle          |
+| DELETE | /api/products/{id}                    | Ürün sil               |
+| GET    | /api/products/{pageNumber}/{pageSize} | Sayfalı ürünleri getir |
 ---
 
 ## 🧪 Test
