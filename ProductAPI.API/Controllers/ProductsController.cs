@@ -10,6 +10,7 @@ namespace ProductAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            //throw new Exception("test hata");
             return CreateActionResult(await productService.GetAllAsync());
         }
 
